@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,26 +14,22 @@
 			<ul>
 				<li><a href="index.jsp">Strona główna</a></li>
 				<li><a href="create.jsp">Utworz tabelę</a></li>
-				<li><a class="active" href="login.jsp">Zaloguj się</a></li>
+				<li><a class="active" href="login">Zaloguj się</a></li>
 				<li style="float: right"><a href="contact.jsp">Kontakt</a></li>
 			</ul>
 		</div>
 		<div id="content">
-			<div id="loginBox">				
+			<div id="loginBox">
 				<form method="post">
-				E-mail:
-				<input type="email" name="email"><br />
        			Login: <br />
         		<input type="text" name="login" /><br /> 
         		Hasło: <br />
-        		<input type="password" name="password1" /><br />
-        		Powtórz hasło: <br />
-        		<input type="password" name="password2" /><br /> 
-        		<input type="submit" value="Zarejestruj">
+        		<input type="password" name="password" /><br /> 
+        		<input type="submit" value="zaloguj">
     			</form>
-			</div>
-			
-		</div>
+    			<a href="register"><small>Nie masz konta? Zajerestruj się</small></a>
+    		</div>
+		</div>	
 	</div>
 	<div id="footer">stopka</div>
 

@@ -14,7 +14,7 @@
 			<ul>
 				<li><a href="index.jsp">Strona główna</a></li>
 				<li><a class="active" href="create.jsp">Utwórz zawody</a></li>
-				<li><a href="login.jsp">Zaloguj się</a></li>
+				<li><a href="login">Zaloguj się</a></li>
 				<li style="float: right"><a href="contact.jsp">Kontakt</a></li>
 			</ul>
 		</div>

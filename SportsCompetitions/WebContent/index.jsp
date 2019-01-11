@@ -14,7 +14,7 @@
 			<ul>
 				<li><a class="active" href="index.jsp">Strona główna</a></li>
 				<li><a href="create.jsp">Utworz tabelę</a></li>
-				<li><a href="login.jsp">Zaloguj się</a></li>
+				<li><a href="login">Zaloguj się</a></li>
 				<li style="float: right"><a href="contact.jsp">Kontakt</a></li>
 			</ul>
 		</div>
