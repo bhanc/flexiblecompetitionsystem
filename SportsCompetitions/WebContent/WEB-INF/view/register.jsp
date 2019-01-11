@@ -15,7 +15,12 @@
 			<ul>
 				<li><a href="index.jsp">Strona główna</a></li>
 				<li><a href="create.jsp">Utworz tabelę</a></li>
-				<li><a class="active" href="login">Zaloguj się</a></li>
+				<c:if test="${isLogged ne true }">
+					<li><a href="login">Zaloguj się</a></li>
+				</c:if>
+				<c:if test="${ isLogged eq true}">
+					<li><a href="logout">Wyloguj</a></li>
+				</c:if>
 				<li style="float: right"><a href="contact.jsp">Kontakt</a></li>
 			</ul>
 		</div>
@@ -32,6 +37,18 @@
         		<input type="password" name="password2" /><br /> 
         		<input type="submit" value="Zarejestruj">
     			</form>
+    			<c:if test="${registerError eq 'loginExist' }">
+    				<p>Login zajęty</p>
+    			</c:if>
+    			<c:if test="${registerError eq 'registerFailed' }">
+    				<p>Rejestracja nie powiodła się</p>
+    			</c:if>
+    			<c:if test="${registerError eq 'wrongPassword' }">
+    				<p>Nieprawidłowe hasło</p>
+    			</c:if>
+    			<c:if test="${registerError eq 'wrongLogin' }">
+    				<p>Nieprawidłowy login</p>
+    			</c:if>
 			</div>
 			
 		</div>
