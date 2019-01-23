@@ -6,6 +6,8 @@ import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 
+import pl.sportscompetitions.DAO.CompetitionsDAO;
+import pl.sportscompetitions.DAO.TeamsDAO;
 import pl.sportscompetitions.DAO.UsersDAO;
 
 /**
@@ -24,8 +26,12 @@ public class SetUpDB implements ServletRequestListener {
     public void requestInitialized(ServletRequestEvent sre)  { 
     	EntityManager entityManager = DBconfig.createEntityManager();
     	UsersDAO usersDAO = new UsersDAO(entityManager);
+    	TeamsDAO teamsDAO = new TeamsDAO(entityManager);
+    	CompetitionsDAO competitionsDAO = new CompetitionsDAO(entityManager);
     	ServletRequest request = sre.getServletRequest();
     	request.setAttribute("UsersDAO", usersDAO);
+    	request.setAttribute("TeamsDAO", teamsDAO);
+    	request.setAttribute("CompetitionsDAO", competitionsDAO);
     }
 	
 }

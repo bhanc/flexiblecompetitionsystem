@@ -15,15 +15,16 @@
 			sportowych</div>
 		<div id="menu">
 			<ul>
-				<li><a href="index.jsp">Strona główna</a></li>
-				<li><a class="active" href="create.jsp">Utwórz zawody</a></li>
+				<li><a href="index">Strona główna</a></li>
+				<li><a href="createCompetitions">Utworz zawody</a></li>
 				<c:if test="${isLogged ne true }">
 					<li><a href="login">Zaloguj się</a></li>
 				</c:if>
 				<c:if test="${ isLogged eq true}">
+					<li><a href="myCompetitions">Moje zawody</a>
 					<li><a href="logout">Wyloguj</a></li>
 				</c:if>
-				<li style="float: right"><a href="contact.jsp">Kontakt</a></li>
+				<li style="float: right"><a class="active" href="contact">Kontakt</a></li>
 			</ul>
 		</div>
 		<div id="content">tresc</div>

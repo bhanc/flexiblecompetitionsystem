@@ -43,7 +43,7 @@ public class Register extends HttpServlet {
 		}else if(request.getParameter("login").equals("") || request.getParameter("password1").equals("")) {
 			request.getSession().setAttribute("registerError", "wrongLogin");
 			request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
-		}else if(usersDAO.registerUser(user).equals(Flags.REGISTER_SUCCESS)) {		
+		}else if(usersDAO.registerUser(user).equals(Flags.SUCCESS)) {		
 			//TODO: w register.jsp zaimplementować sukces rejestracji
 			System.out.println("Success!");
 			response.sendRedirect(request.getContextPath() + "/login");
@@ -52,7 +52,7 @@ public class Register extends HttpServlet {
 			System.out.println("Login exist");
 			request.getSession().setAttribute("registerError", "loginExist");
 			request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
-		}else if (usersDAO.registerUser(user).equals(Flags.REGISTER_FAILED)){
+		}else if (usersDAO.registerUser(user).equals(Flags.FAILED)){
 			//TODO: w register.jsp zaimplementować obsługę błędu przy rejesteracji
 			System.out.println("Something went wrong.");
 			request.getSession().setAttribute("registerError", "RegisterFailed");

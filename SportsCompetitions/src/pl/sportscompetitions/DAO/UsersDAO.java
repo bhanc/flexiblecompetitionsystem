@@ -30,14 +30,14 @@ public class UsersDAO {
 			entityTransaction.begin();
 			entityManager.persist(user);
 			entityTransaction.commit();
-			return Flags.REGISTER_SUCCESS;
+			return Flags.SUCCESS;
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
-			return Flags.REGISTER_FAILED;
+			return Flags.FAILED;
 		} catch (RollbackException e) {
 			e.printStackTrace();
 			entityTransaction.rollback();
-			return Flags.REGISTER_FAILED;
+			return Flags.FAILED;
 		}
 
 	}
@@ -54,7 +54,7 @@ public class UsersDAO {
 
 	}
 
-	private Users getUserByLogin(String login) {
+	public Users getUserByLogin(String login) {
 		Users user = (Users) entityManager.createQuery("SELECT u FROM Users u WHERE u.login = :login")
 				.setParameter("login", login).getSingleResult();
 

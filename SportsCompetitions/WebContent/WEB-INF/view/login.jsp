@@ -15,10 +15,10 @@
 			sportowych</div>
 		<div id="menu">
 			<ul>
-				<li><a href="index.jsp">Strona główna</a></li>
-				<li><a href="create.jsp">Utworz tabelę</a></li>
+				<li><a href="index">Strona główna</a></li>
+				<li><a href="createCompetitions">Utworz zawody</a></li>
 				<li><a class="active" href="login">Zaloguj się</a></li>
-				<li style="float: right"><a href="contact.jsp">Kontakt</a></li>
+				<li style="float: right"><a href="contact">Kontakt</a></li>
 			</ul>
 		</div>
 		<div id="content">

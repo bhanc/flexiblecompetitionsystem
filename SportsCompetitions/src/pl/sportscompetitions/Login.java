@@ -32,6 +32,10 @@ public class Login extends HttpServlet {
 		UsersDAO usersDAO = (UsersDAO)request.getAttribute("UsersDAO");
 		if(usersDAO.Logging(request.getParameter("login"), request.getParameter("password"))) {
 			request.getSession().setAttribute("isLogged", true);
+			request.getSession().setAttribute("user", usersDAO.getUserByLogin(request.getParameter("login")));
+			//TODO: usuń to
+//			Users user = (Users) request.getSession().getAttribute("user");
+//			System.out.println(user.getId());
 			response.sendRedirect(request.getContextPath());
 		} else {
 			request.setAttribute("loginError", true);

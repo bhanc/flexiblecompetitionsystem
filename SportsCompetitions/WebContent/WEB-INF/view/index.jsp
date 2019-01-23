@@ -7,7 +7,8 @@
 <meta charset="UTF-8">
 <title>Zawody sportowe - organizuj zawody szybciej, łatwiej i
 	przyjemniej</title>
-<link rel="Stylesheet" type="text/css" href="style/style.css" />
+	
+<link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 <body>
 	<div id="top">
@@ -15,15 +16,16 @@
 			sportowych</div>
 		<div id="menu">
 			<ul>
-				<li><a class="active" href="index.jsp">Strona główna</a></li>
-				<li><a href="create.jsp">Utworz tabelę</a></li>
+				<li><a class="active" href="index">Strona główna</a></li>
+				<li><a href="createCompetitions">Utwórz zawody</a></li>
 				<c:if test="${isLogged ne true }">
 					<li><a href="login">Zaloguj się</a></li>
 				</c:if>
 				<c:if test="${ isLogged eq true}">
+					<li><a href="myCompetitions">Moje zawody</a>
 					<li><a href="logout">Wyloguj</a></li>
 				</c:if>
-				<li style="float: right"><a href="contact.jsp">Kontakt</a></li>
+				<li style="float: right"><a href="contact">Kontakt</a></li>
 			</ul>
 		</div>
 		<div id="content">tresc Lorem ipsum dolor sit amet, consectetur
